@@ -1,5 +1,5 @@
 # Ajeer Expiry Tracker
 
-Offline PDF expiry tracker. Mac builds target Apple silicon and Intel separately.
+Offline PDF expiry tracker. Separate native macOS 15+ builds for Apple silicon and Intel.
 
-No employee documents or production data are stored in this repository.
+No employee documents or production data are included.

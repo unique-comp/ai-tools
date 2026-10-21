@@ -1,0 +1,32 @@
+name: Build Ajeer Tracker for Mac
+on:
+  push:
+    paths:
+      - 'ajeer-tracker/**'
+      - '.github/workflows/ajeer-macos.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            architecture: arm64
+          - runner: macos-15-intel
+            architecture: x86_64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test native Mac app
+        shell: bash
+        run: bash ajeer-tracker/build_macos.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Ajeer-Tracker-macOS-${{ matrix.architecture }}
+          path: ajeer-tracker/deliverables/*
+          if-no-files-found: error
+          retention-days: 7

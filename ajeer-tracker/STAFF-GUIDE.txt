@@ -1,0 +1,26 @@
+AJEER EXPIRY TRACKER FOR MAC
+
+Unzip the matching Mac build and open Ajeer Tracker.app.
+It automatically creates Ajeer Documents on your Desktop.
+Put your Ajeer PDFs there, or use Add PDFs. Allow Desktop access if macOS asks.
+Keep the app open: it checks every 30 seconds and checks again when reopened.
+
+Within 30 days INCLUDES Within 15 days. Do not add the two totals together.
+Expired documents and review items are excluded from these upcoming totals.
+Scanned PDFs need confirmation against the original before they count.
+Duplicate permit + Iqama + expiry copies count once. Different permits count separately.
+Supporting pages and unclear files stay visible under Needs review.
+Move superseded permits outside the monitored folder for a current-only list.
+
+Double-click a row to open its PDF. Review / correct selected confirms its details.
+Export displayed list saves a CSV for Excel or Numbers.
+Back up the whole Ajeer Documents folder, including .ajeer-tracker.
+Each Mac keeps separate data unless you transfer that folder.
+
+No Python, Homebrew, Word or Excel installation is required on the staff Mac.
+The app works offline and does not upload documents or verify them with Ajeer.
+Dates use the Mac clock. This app does not monitor while closed.
+
+Builds target macOS 15 or newer. Use arm64 for Apple silicon, x86_64 for Intel.
+The build is ad-hoc signed, not Apple Developer ID notarized. Your organisation's
+Mac security policy may restrict it. Ask IT if it is blocked; do not disable protection.
