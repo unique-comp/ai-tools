@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 if [[ "$(uname -s)" != Darwin ]]; then echo 'A macOS computer is required.' >&2; exit 1; fi
 export HOMEBREW_NO_AUTO_UPDATE=1
-brew install python@3.12 python-tk@3.12 tesseract tesseract-lang
+brew install --overwrite python@3.12 python-tk@3.12 tesseract tesseract-lang
 PYTHON="$(brew --prefix python@3.12)/bin/python3.12"
 "$PYTHON" -m venv .build-venv
 PYTHON="$PWD/.build-venv/bin/python"
